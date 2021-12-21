@@ -1,0 +1,15 @@
+; this file was created with wlalink by ville helin <vhelin@iki.fi>.
+; no$gmb symbolic information for "testAddition.gb".
+00:c000 oam
+00:0150 initGB
+00:01ba _defaultPalette
+00:0022 oamDMA
+00:002c endOamDMA
+00:0061 loadPalettes
+00:002d printByte
+00:002d printBCD
+00:c0a0 a
+00:c0a1 b
+00:c0a2 c
+00:c0a3 d
+00:0001 main

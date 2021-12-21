@@ -1,0 +1,12 @@
+; this file was created with wlalink by ville helin <vhelin@iki.fi>.
+; no$gmb symbolic information for "global.gb".
+00:c000 oam
+00:0150 initGB
+00:01ba _defaultPalette
+00:000d oamDMA
+00:0017 endOamDMA
+00:0061 loadPalettes
+00:0018 printByte
+00:0018 printBCD
+00:c0a0 i
+00:0001 main
