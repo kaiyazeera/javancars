@@ -622,7 +622,7 @@ public class JavaNcarsParser extends Parser {
 			setState(78);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if (_la==IDENTIFIER) {
+			if (_la==DECIMAL_LITERAL || _la==IDENTIFIER) {
 				{
 				setState(77);
 				parameterList();
@@ -649,6 +649,12 @@ public class JavaNcarsParser extends Parser {
 		public TerminalNode IDENTIFIER(int i) {
 			return getToken(JavaNcarsParser.IDENTIFIER, i);
 		}
+		public List<LiteralContext> literal() {
+			return getRuleContexts(LiteralContext.class);
+		}
+		public LiteralContext literal(int i) {
+			return getRuleContext(LiteralContext.class,i);
+		}
 		public ParameterListContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -667,21 +673,53 @@ public class JavaNcarsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(82);
-			match(IDENTIFIER);
-			setState(87);
+			setState(84);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case IDENTIFIER:
+				{
+				setState(82);
+				match(IDENTIFIER);
+				}
+				break;
+			case DECIMAL_LITERAL:
+				{
+				setState(83);
+				literal();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+			setState(93);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__1) {
 				{
 				{
-				setState(83);
+				setState(86);
 				match(T__1);
-				setState(84);
-				match(IDENTIFIER);
-				}
-				}
 				setState(89);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case IDENTIFIER:
+					{
+					setState(87);
+					match(IDENTIFIER);
+					}
+					break;
+				case DECIMAL_LITERAL:
+					{
+					setState(88);
+					literal();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				}
+				}
+				setState(95);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -717,7 +755,7 @@ public class JavaNcarsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(90);
+			setState(96);
 			match(INT);
 			}
 		}
@@ -764,59 +802,59 @@ public class JavaNcarsParser extends Parser {
 		enterRule(_localctx, 26, RULE_statement);
 		int _la;
 		try {
-			setState(105);
+			setState(111);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,8,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,10,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(92);
+				setState(98);
 				((StatementContext)_localctx).blockLabel = block();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(93);
+				setState(99);
 				match(RETURN);
-				setState(95);
+				setState(101);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==DECIMAL_LITERAL || _la==IDENTIFIER) {
 					{
-					setState(94);
+					setState(100);
 					expression(0);
 					}
 				}
 
-				setState(97);
+				setState(103);
 				match(SEMI);
 				}
 				break;
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(98);
+				setState(104);
 				match(SEMI);
 				}
 				break;
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(99);
+				setState(105);
 				((StatementContext)_localctx).statementExpression = expression(0);
-				setState(100);
+				setState(106);
 				match(SEMI);
 				}
 				break;
 			case 5:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(102);
+				setState(108);
 				((StatementContext)_localctx).identifierLabel = match(IDENTIFIER);
-				setState(103);
+				setState(109);
 				match(T__2);
-				setState(104);
+				setState(110);
 				statement();
 				}
 				break;
@@ -876,18 +914,18 @@ public class JavaNcarsParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(110);
+			setState(116);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case IDENTIFIER:
 				{
-				setState(108);
+				setState(114);
 				match(IDENTIFIER);
 				}
 				break;
 			case DECIMAL_LITERAL:
 				{
-				setState(109);
+				setState(115);
 				literal();
 				}
 				break;
@@ -895,9 +933,9 @@ public class JavaNcarsParser extends Parser {
 				throw new NoViableAltException(this);
 			}
 			_ctx.stop = _input.LT(-1);
-			setState(117);
+			setState(123);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,10,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,12,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
@@ -908,9 +946,9 @@ public class JavaNcarsParser extends Parser {
 					_localctx.left = _prevctx;
 					_localctx.left = _prevctx;
 					pushNewRecursionContext(_localctx, _startState, RULE_expression);
-					setState(112);
+					setState(118);
 					if (!(precpred(_ctx, 3))) throw new FailedPredicateException(this, "precpred(_ctx, 3)");
-					setState(113);
+					setState(119);
 					((ExpressionContext)_localctx).bop = _input.LT(1);
 					_la = _input.LA(1);
 					if ( !(_la==ADD || _la==SUB) ) {
@@ -921,14 +959,14 @@ public class JavaNcarsParser extends Parser {
 						_errHandler.reportMatch(this);
 						consume();
 					}
-					setState(114);
+					setState(120);
 					((ExpressionContext)_localctx).right = expression(4);
 					}
 					} 
 				}
-				setState(119);
+				setState(125);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,10,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,12,_ctx);
 			}
 			}
 		}
@@ -962,7 +1000,7 @@ public class JavaNcarsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(120);
+			setState(126);
 			match(DECIMAL_LITERAL);
 			}
 		}
@@ -993,36 +1031,38 @@ public class JavaNcarsParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\26}\4\2\t\2\4\3\t"+
-		"\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4"+
-		"\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\3\2\3\2\3\2\3\3"+
-		"\3\3\3\3\6\3)\n\3\r\3\16\3*\3\4\3\4\7\4/\n\4\f\4\16\4\62\13\4\3\4\3\4"+
-		"\3\5\3\5\3\6\3\6\3\6\3\6\3\7\3\7\3\7\3\7\3\b\3\b\3\b\3\b\3\t\3\t\3\n\3"+
-		"\n\3\n\5\nI\n\n\3\13\3\13\5\13M\n\13\3\f\3\f\5\fQ\n\f\3\f\3\f\3\r\3\r"+
-		"\3\r\7\rX\n\r\f\r\16\r[\13\r\3\16\3\16\3\17\3\17\3\17\5\17b\n\17\3\17"+
-		"\3\17\3\17\3\17\3\17\3\17\3\17\3\17\5\17l\n\17\3\20\3\20\3\20\5\20q\n"+
-		"\20\3\20\3\20\3\20\7\20v\n\20\f\20\16\20y\13\20\3\21\3\21\3\21\2\3\36"+
-		"\22\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \2\3\3\2\17\20\2{\2\"\3\2\2"+
-		"\2\4(\3\2\2\2\6,\3\2\2\2\b\65\3\2\2\2\n\67\3\2\2\2\f;\3\2\2\2\16?\3\2"+
-		"\2\2\20C\3\2\2\2\22E\3\2\2\2\24L\3\2\2\2\26N\3\2\2\2\30T\3\2\2\2\32\\"+
-		"\3\2\2\2\34k\3\2\2\2\36p\3\2\2\2 z\3\2\2\2\"#\5\4\3\2#$\7\2\2\3$\3\3\2"+
-		"\2\2%)\5\22\n\2&)\5\n\6\2\')\5\f\7\2(%\3\2\2\2(&\3\2\2\2(\'\3\2\2\2)*"+
-		"\3\2\2\2*(\3\2\2\2*+\3\2\2\2+\5\3\2\2\2,\60\7\25\2\2-/\5\b\5\2.-\3\2\2"+
-		"\2/\62\3\2\2\2\60.\3\2\2\2\60\61\3\2\2\2\61\63\3\2\2\2\62\60\3\2\2\2\63"+
-		"\64\7\26\2\2\64\7\3\2\2\2\65\66\5\4\3\2\66\t\3\2\2\2\678\5\32\16\289\5"+
-		"\16\b\29:\7\22\2\2:\13\3\2\2\2;<\7\3\2\2<=\7\r\2\2=>\7\22\2\2>\r\3\2\2"+
-		"\2?@\5\20\t\2@A\7\21\2\2AB\5\36\20\2B\17\3\2\2\2CD\7\r\2\2D\21\3\2\2\2"+
-		"EF\7\r\2\2FH\5\26\f\2GI\5\24\13\2HG\3\2\2\2HI\3\2\2\2I\23\3\2\2\2JM\5"+
-		"\6\4\2KM\7\22\2\2LJ\3\2\2\2LK\3\2\2\2M\25\3\2\2\2NP\7\23\2\2OQ\5\30\r"+
-		"\2PO\3\2\2\2PQ\3\2\2\2QR\3\2\2\2RS\7\24\2\2S\27\3\2\2\2TY\7\r\2\2UV\7"+
-		"\4\2\2VX\7\r\2\2WU\3\2\2\2X[\3\2\2\2YW\3\2\2\2YZ\3\2\2\2Z\31\3\2\2\2["+
-		"Y\3\2\2\2\\]\7\7\2\2]\33\3\2\2\2^l\5\6\4\2_a\7\6\2\2`b\5\36\20\2a`\3\2"+
-		"\2\2ab\3\2\2\2bc\3\2\2\2cl\7\22\2\2dl\7\22\2\2ef\5\36\20\2fg\7\22\2\2"+
-		"gl\3\2\2\2hi\7\r\2\2ij\7\5\2\2jl\5\34\17\2k^\3\2\2\2k_\3\2\2\2kd\3\2\2"+
-		"\2ke\3\2\2\2kh\3\2\2\2l\35\3\2\2\2mn\b\20\1\2nq\7\r\2\2oq\5 \21\2pm\3"+
-		"\2\2\2po\3\2\2\2qw\3\2\2\2rs\f\5\2\2st\t\2\2\2tv\5\36\20\6ur\3\2\2\2v"+
-		"y\3\2\2\2wu\3\2\2\2wx\3\2\2\2x\37\3\2\2\2yw\3\2\2\2z{\7\f\2\2{!\3\2\2"+
-		"\2\r(*\60HLPYakpw";
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\26\u0083\4\2\t\2"+
+		"\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13"+
+		"\t\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\3\2\3\2"+
+		"\3\2\3\3\3\3\3\3\6\3)\n\3\r\3\16\3*\3\4\3\4\7\4/\n\4\f\4\16\4\62\13\4"+
+		"\3\4\3\4\3\5\3\5\3\6\3\6\3\6\3\6\3\7\3\7\3\7\3\7\3\b\3\b\3\b\3\b\3\t\3"+
+		"\t\3\n\3\n\3\n\5\nI\n\n\3\13\3\13\5\13M\n\13\3\f\3\f\5\fQ\n\f\3\f\3\f"+
+		"\3\r\3\r\5\rW\n\r\3\r\3\r\3\r\5\r\\\n\r\7\r^\n\r\f\r\16\ra\13\r\3\16\3"+
+		"\16\3\17\3\17\3\17\5\17h\n\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17"+
+		"\5\17r\n\17\3\20\3\20\3\20\5\20w\n\20\3\20\3\20\3\20\7\20|\n\20\f\20\16"+
+		"\20\177\13\20\3\21\3\21\3\21\2\3\36\22\2\4\6\b\n\f\16\20\22\24\26\30\32"+
+		"\34\36 \2\3\3\2\17\20\2\u0083\2\"\3\2\2\2\4(\3\2\2\2\6,\3\2\2\2\b\65\3"+
+		"\2\2\2\n\67\3\2\2\2\f;\3\2\2\2\16?\3\2\2\2\20C\3\2\2\2\22E\3\2\2\2\24"+
+		"L\3\2\2\2\26N\3\2\2\2\30V\3\2\2\2\32b\3\2\2\2\34q\3\2\2\2\36v\3\2\2\2"+
+		" \u0080\3\2\2\2\"#\5\4\3\2#$\7\2\2\3$\3\3\2\2\2%)\5\22\n\2&)\5\n\6\2\'"+
+		")\5\f\7\2(%\3\2\2\2(&\3\2\2\2(\'\3\2\2\2)*\3\2\2\2*(\3\2\2\2*+\3\2\2\2"+
+		"+\5\3\2\2\2,\60\7\25\2\2-/\5\b\5\2.-\3\2\2\2/\62\3\2\2\2\60.\3\2\2\2\60"+
+		"\61\3\2\2\2\61\63\3\2\2\2\62\60\3\2\2\2\63\64\7\26\2\2\64\7\3\2\2\2\65"+
+		"\66\5\4\3\2\66\t\3\2\2\2\678\5\32\16\289\5\16\b\29:\7\22\2\2:\13\3\2\2"+
+		"\2;<\7\3\2\2<=\7\r\2\2=>\7\22\2\2>\r\3\2\2\2?@\5\20\t\2@A\7\21\2\2AB\5"+
+		"\36\20\2B\17\3\2\2\2CD\7\r\2\2D\21\3\2\2\2EF\7\r\2\2FH\5\26\f\2GI\5\24"+
+		"\13\2HG\3\2\2\2HI\3\2\2\2I\23\3\2\2\2JM\5\6\4\2KM\7\22\2\2LJ\3\2\2\2L"+
+		"K\3\2\2\2M\25\3\2\2\2NP\7\23\2\2OQ\5\30\r\2PO\3\2\2\2PQ\3\2\2\2QR\3\2"+
+		"\2\2RS\7\24\2\2S\27\3\2\2\2TW\7\r\2\2UW\5 \21\2VT\3\2\2\2VU\3\2\2\2W_"+
+		"\3\2\2\2X[\7\4\2\2Y\\\7\r\2\2Z\\\5 \21\2[Y\3\2\2\2[Z\3\2\2\2\\^\3\2\2"+
+		"\2]X\3\2\2\2^a\3\2\2\2_]\3\2\2\2_`\3\2\2\2`\31\3\2\2\2a_\3\2\2\2bc\7\7"+
+		"\2\2c\33\3\2\2\2dr\5\6\4\2eg\7\6\2\2fh\5\36\20\2gf\3\2\2\2gh\3\2\2\2h"+
+		"i\3\2\2\2ir\7\22\2\2jr\7\22\2\2kl\5\36\20\2lm\7\22\2\2mr\3\2\2\2no\7\r"+
+		"\2\2op\7\5\2\2pr\5\34\17\2qd\3\2\2\2qe\3\2\2\2qj\3\2\2\2qk\3\2\2\2qn\3"+
+		"\2\2\2r\35\3\2\2\2st\b\20\1\2tw\7\r\2\2uw\5 \21\2vs\3\2\2\2vu\3\2\2\2"+
+		"w}\3\2\2\2xy\f\5\2\2yz\t\2\2\2z|\5\36\20\6{x\3\2\2\2|\177\3\2\2\2}{\3"+
+		"\2\2\2}~\3\2\2\2~\37\3\2\2\2\177}\3\2\2\2\u0080\u0081\7\f\2\2\u0081!\3"+
+		"\2\2\2\17(*\60HLPV[_gqv}";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

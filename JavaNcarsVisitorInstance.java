@@ -88,7 +88,6 @@ public class JavaNcarsVisitorInstance extends JavaNcarsBaseVisitor<String> {
         } else {
             // is call
             String args = this.visit(ctx.getChild(1));
-            //String args = "ld " + + crlf(); // load arguments
             return args + "call " + ctx.getChild(0).getText() + crlf();
         }
     }
@@ -111,15 +110,20 @@ public class JavaNcarsVisitorInstance extends JavaNcarsBaseVisitor<String> {
         StringBuilder ret = new StringBuilder();
         for(int i=0; (i< ctx.children.size() && i < 11); i = i + 2){
             char locVar = switch (i) {
-                case 0 -> 'c';
-                case 2 -> 'b';
-                case 4 -> 'e';
-                case 6 -> 'd';
-                case 8 -> 'l';
-                case 10 -> 'h';
+                case 0 -> 'a';
+                case 2 -> 'c';
+                case 4 -> 'b';
+                case 6 -> 'e';
+                case 8 -> 'd';
+                case 10 -> 'l';
                 default -> 'a';
             };
-            ret.append("ld ").append(locVar).append(", (").append(ctx.getChild(i).getText()).append(")").append(crlf());
+            if(ctx.getChild(i).getClass().getCanonicalName().equals("JavaNcarsParser.LiteralContext")){
+                ret.append("ld ").append(locVar).append(", ").append(ctx.getChild(i).getText()).append(crlf());
+
+            } else {
+                ret.append("ld ").append(locVar).append(", (").append(ctx.getChild(i).getText()).append(")").append(crlf());
+            }
         }
 
         return ret.toString();

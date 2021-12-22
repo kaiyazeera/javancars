@@ -1,0 +1,16 @@
+; this file was created with wlalink by ville helin <vhelin@iki.fi>.
+; no$gmb symbolic information for "drawFace.gb".
+00:c400 oam
+00:0150 initGB
+00:01ba _defaultPalette
+00:002c oamDMA
+00:0036 endOamDMA
+00:00f2 waitVBlank
+00:02ab turnScreenOff
+00:02c9 setTile
+00:0001 clearVRAM
+00:022b loadTiles1bpp
+00:0061 loadPalettes
+00:c000 field
+00:01c2 main
+00:0283 tiles

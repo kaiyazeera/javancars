@@ -31,7 +31,7 @@ variableDeclaratorId: IDENTIFIER;
 methodDeclaration: IDENTIFIER parameters (body=methodBody)?;
 methodBody: block | ';' ;
 parameters: '(' parameterList? ')';
-parameterList: IDENTIFIER (',' IDENTIFIER)*;
+parameterList: (IDENTIFIER | literal) (',' (IDENTIFIER | literal) )*;
 //parameterList: parameter (',' parameter)*;
 //parameter: variableDeclaratorId;
 //parameter: type variableDeclaratorId;

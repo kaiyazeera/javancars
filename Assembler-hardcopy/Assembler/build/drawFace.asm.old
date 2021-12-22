@@ -1,0 +1,102 @@
+.include "../framework.asm"
+
+.name "TEST"
+
+.ends
+.section "main"
+    main:
+        call clearVRAM;
+        
+
+        ld a, 200
+        ld c, 1
+        ld b, 1
+        ld bc, field
+        pop bc
+        call setTile
+        ld a, 1
+        ld c, 1
+        ld b, 2
+        ld bc, field
+        call setTile
+        ld a, 1
+        ld c, 1
+        ld b, 3
+        call setTile  
+        ld a, 1
+        ld c, 2
+        ld b, 1
+        call setTile
+        ld a, 1
+        ld c, 2
+        ld b, 2
+        call setTile
+        ld a, 1
+        ld c, 2
+        ld b, 3
+        call setTile
+
+        ld a, 1
+        ld c, 3
+        ld b, 1
+        call setTile
+        ld a, 1
+        ld c, 3
+        ld b, 2
+        call setTile
+        ld a, 1
+        ld c, 3
+        ld b, 3
+        call setTile
+        call waitVBlank
+        ret
+  .ends
+
+.section "tiles"
+tiles:
+.db %11111111
+.db %11111111
+.db %11111111
+.db %11111111
+.db %11111111
+.db %11111111
+.db %11111111
+.db %11111111
+
+.db %10000000
+.db %11000000
+.db %11100000
+.db %11110000
+.db %11110000
+.db %11100000
+.db %11000000
+.db %10000000
+
+.db %00000001
+.db %00000011
+.db %00000111
+.db %00001111
+.db %00001111
+.db %00000111
+.db %00000011
+.db %00000001
+
+.db %00000000
+.db %00000000
+.db %00000000
+.db %00000000
+.db %00011000
+.db %00111100
+.db %01111110
+.db %11111111
+
+.db %00000000
+.db %00011000
+.db %00111100
+.db %01111110
+.db %01111110
+.db %00111100
+.db %00011000
+.db %00000000
+.ends
+

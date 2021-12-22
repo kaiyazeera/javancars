@@ -1,0 +1,70 @@
+DISCARD: friendlyFace.o:../framework.asm: Section "setSpritePosition" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "setSpriteY" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "setSpriteX" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "setSpriteAttributes" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "setSpriteTile" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "setSpriteFlags" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "enableSprites" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "disableSprites" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "enableTallSprites" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "disableTallSprites" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "enableWindow" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "disableWindow" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "turnScreenOn" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "turnScreenOff" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "setTiles" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "setWindowTile" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "setFlags" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "setScrollX" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "setScrollY" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "setWindowX" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "setWindowY" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "clearVRAM" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "clearTilemap" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "clearWindow" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "loadTiles1bpp" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "loadTiles" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "tableSoundNoteFrequencies" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "playNoteOnChannel1" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "setChannel1noteAndVolume" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "playNoteOnChannel2" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "setChannel2noteAndVolume" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "playNoteOnChannel3" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "setChannel3noteAndVolume" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "playNoise" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "enableSound" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "disableSound" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "setVolume" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "getButtonStates" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "rand" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "memset" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "memcpy" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "printByte" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "printSignedByte" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "printWord" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "printSignedWord" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "printChar" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "printBool" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "printString" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "printStringLn" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "printByteArray" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "printSignedByteArray" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "printWordArray" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "printSignedWordArray" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "printBoolArray" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "printCharArray" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "printFixed" was discarded.
+DISCARD: friendlyFace.o:../framework.asm: Section "printFixedArray" was discarded.
+Free space at $0031-$0037.
+Free space at $003a-$003f.
+Free space at $0047.
+Free space at $0049-$004f.
+Free space at $0051-$0057.
+Free space at $0059-$005f.
+Free space at $00f2-$00ff.
+Free space at $0144-$0146.
+Free space at $014b-$014c.
+Free space at $0553-$ffff.
+Bank 00 has 31459 bytes (96.01%) free.
+Bank 01 has 32768 bytes (100.0%) free.
+64227 unused bytes of total 65536.

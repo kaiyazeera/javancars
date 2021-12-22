@@ -1,0 +1,11 @@
+; this file was created with wlalink by ville helin <vhelin@iki.fi>.
+; no$gmb symbolic information for "friendlyFace.gb".
+00:c000 oam
+00:04e1 initGB
+00:054b _defaultPalette
+00:0026 oamDMA
+00:0030 endOamDMA
+00:0019 waitVBlank
+00:0001 setTile
+00:0061 loadPalettes
+00:0150 main

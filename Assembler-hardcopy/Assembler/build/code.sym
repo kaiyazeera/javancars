@@ -1,0 +1,15 @@
+; this file was created with wlalink by ville helin <vhelin@iki.fi>.
+; no$gmb symbolic information for "code.gb".
+00:c000 oam
+00:0150 initGB
+00:01ba _defaultPalette
+00:001c oamDMA
+00:0026 endOamDMA
+00:0061 loadPalettes
+00:0027 printByte
+00:0027 printBCD
+00:c0a0 c
+00:c0a1 b
+00:c0a2 d
+00:c0a3 e
+00:0001 main
